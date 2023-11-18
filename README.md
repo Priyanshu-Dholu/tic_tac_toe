@@ -1,16 +1,7 @@
-# tic_tac_toe
+<h1 align="center" id="title">Tic Tac Toe</h1>
 
-A new Flutter project.
+<p id="description">A Simple Game Made Using Flutter</p>
 
-## Getting Started
+<h2>🚀 Demo</h2>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://i.ibb.co/hMn7K8g/Tic-Tac-Tor-Demo.gif" ></img>

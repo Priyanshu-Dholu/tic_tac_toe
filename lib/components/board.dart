@@ -41,6 +41,7 @@ class BoardWidget extends StatelessWidget {
         height: 100,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.black),
+          borderRadius: BorderRadius.circular(10.0),
           color: board[i][j] == 'X'
               ? Colors.blue
               : (board[i][j] == 'O' ? Colors.red : Colors.white),
@@ -49,6 +50,8 @@ class BoardWidget extends StatelessWidget {
           child: Text(
             board[i][j],
             style: TextStyle(
+              fontFamily: 'Quicksand',
+              fontWeight: FontWeight.w700,
               fontSize: 40,
               color: board[i][j] == '' ? Colors.black : Colors.white,
             ),

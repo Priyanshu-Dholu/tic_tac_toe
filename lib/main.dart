@@ -23,10 +23,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Tic Tac Toe',
       theme: ThemeData(
-        primarySwatch:
-            Colors.lightGreen, // Set the primarySwatch to light green
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
       ),
       home: TicTacToe(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -37,7 +37,18 @@ class _TicTacToeState extends State<TicTacToe> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tic Tac Toe'),
+        title: Container(
+          child: const Text(
+            'Tic Tac Toe',
+            style: TextStyle(
+                fontFamily: 'Quicksand',
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 255, 255, 255)),
+          ),
+        ),
+        backgroundColor: Colors.deepOrange,
+        centerTitle: true, // Center the title
       ),
       body: Stack(
         children: [
@@ -48,7 +59,9 @@ class _TicTacToeState extends State<TicTacToe> {
                 Text(
                   'Player $currentPlayer\'s turn',
                   style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                      fontFamily: 'Quicksand',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 20),
                 BoardWidget(
@@ -99,7 +112,9 @@ class _TicTacToeState extends State<TicTacToe> {
                         child: const Text(
                           'Restart Game',
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
+                              fontFamily: 'Quicksand',
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       SizedBox(height: 20),
@@ -114,6 +129,7 @@ class _TicTacToeState extends State<TicTacToe> {
                         child: Text(
                           'Player ${currentPlayer == 'X' ? 'O' : 'X'} Wins 🎉!',
                           style: const TextStyle(
+                            fontFamily: 'Quicksand',
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(255, 255, 255, 255),
@@ -132,12 +148,28 @@ class _TicTacToeState extends State<TicTacToe> {
             right: 0,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Player X Wins: $playerXWins'),
-                  const SizedBox(width: 20),
-                  Text('Player O Wins: $playerOWins'),
+                  const SizedBox(height: 50),
+                  Text(
+                    'Player X Wins: $playerXWins',
+                    style: TextStyle(
+                      fontFamily: 'Quicksand',
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 87, 140, 214),
+                    ),
+                  ),
+                  Text(
+                    'Player O Wins: $playerOWins',
+                    style: TextStyle(
+                      fontFamily: 'Quicksand',
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 245, 121, 38),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -217,10 +249,10 @@ class _TicTacToeState extends State<TicTacToe> {
         // Update win count for the player who won
         if (currentPlayer == 'X') {
           playerXWins++;
-          winBackgroundColor = Colors.blue;
+          winBackgroundColor = Color.fromARGB(255, 87, 140, 214);
         } else {
           playerOWins++;
-          winBackgroundColor = Colors.red;
+          winBackgroundColor = Color.fromARGB(255, 245, 121, 38);
         }
         saveStats();
       }
